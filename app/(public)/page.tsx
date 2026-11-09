@@ -51,7 +51,7 @@ export default async function HomePage() {
             href="/daftar"
             className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-xl transition"
           >
-            Daftar Jamaah Baru →
+            Daftar Jamaah →
           </Link>
         </div>
 
