@@ -26,13 +26,14 @@ export default function DaftarPublikPage() {
   // Fetch desa & kelompok dari Supabase (butuh endpoint publik)
   // Untuk simple-nya, kita pakai Supabase Client langsung karena read-only
   useEffect(() => {
-    // Ganti dengan pemanggilan API publik jika perlu
-    // Di sini saya hardcode dulu atau panggil API /api/wilayah (dibuat di bawah)
     fetch("/api/wilayah")
       .then((res) => res.json())
       .then((data) => {
         setDesaList(data.desa || []);
         setKelompokList(data.kelompok || []);
+      })
+      .catch((err) => {
+        console.error("Gagal ambil wilayah:", err);
       });
   }, []);
 
